@@ -1,0 +1,27 @@
+h1. Scanner API
+
+All requests must include an _api_token_ paramater.
+
+If a request is issued without a _api_token_, or with an invalid _api_token_, the response will return:
+
+@401 Unauthorized: {"error":"Invalid API token."}}@
+
+h1. Checking in a customer
+
+h2. Checkin
+
+Resource: @GET /api/v1/checkin@
+
+Paramaters: @api_token, checkin: {card_number, store_id}@
+
+CURL example:
+
+@curl -v -X POST -H "Content-Type: application/json" --data "{\"api_token\": \"test\", \"checkin\": {\"card_number\": \"123\", \"store_id\": 1}}" http://scanner.144.38.23.210.xip.io/api/v1/checkin@
+
+h3. Successful response:
+
+Status code 200 OK
+
+h3. Failure respone:
+
+Status code 406 Not Acceptable

@@ -1,3 +1,5 @@
 class Customer < ActiveRecord::Base
-  attr_accessible :card_number, :email, :name
+  include ActiveModel::ForbiddenAttributesProtection
+  
+  has_many :checkins
 end

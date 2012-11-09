@@ -1,6 +1,12 @@
 Scanner::Application.routes.draw do
   resources :customers
 
+  namespace :api do
+    namespace :v1 do
+      resources :checkin
+    end
+  end
+
   root :to => 'customers#index'
 
 
