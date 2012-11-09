@@ -58,5 +58,13 @@ module Scanner
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+
+    # Configure generators values
+    config.generators do |g|
+      g.haml true
+      g.helper false
+    end
+
   end
 end
