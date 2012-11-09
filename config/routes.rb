@@ -1,4 +1,6 @@
 Scanner::Application.routes.draw do
+  resources :products
+
   resources :customers
 
   namespace :api do

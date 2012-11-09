@@ -10,6 +10,8 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'pg'
 gem 'rabl'
 gem 'strong_parameters'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
