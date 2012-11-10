@@ -81,12 +81,18 @@ class CustomersController < ApplicationController
     end
   end
 
+  def products
+    @products = Product.all
+    @customer = Customer.find(params[:id])
+    render layout: 'mobile'
+  end
+
   private
 
     # Use this method to whitelist the permissible parameters. Example:
     # params.require(:person).permit(:name, :age)
     # Also, you can specialize this method with per-user checking of permissible attributes.
     def customer_params
-      params.require(:customer).permit(:card_number, :email, :name)
+      params.require(:customer).permit(:card_number, :email, :name, :device_token)
     end
 end

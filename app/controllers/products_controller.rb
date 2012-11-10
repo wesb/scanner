@@ -87,6 +87,6 @@ class ProductsController < ApplicationController
     # params.require(:person).permit(:name, :age)
     # Also, you can specialize this method with per-user checking of permissible attributes.
     def product_params
-      params.require(:product).permit(:category, :description, :name, :photo, :price, :sku)
+      params.require(:product).permit(:category, :description, :name, :photo, :price, :sku, :banner)
     end
 end

@@ -1,0 +1,11 @@
+.container
+  = image_tag "logo.png", width: 220, height: 61, id: "logo"
+  %h1#main-title= "Welcome Back, #{@customer.name}."
+  - @products.each do |product|
+    %a.product{href: "#", style: "background-image: url(#{product.photo.full.url});"}
+      %h1.product-banner= product.banner
+      .product-content
+        %h1= product.name
+        %p
+          %strong= product.price
+        %p= product.description

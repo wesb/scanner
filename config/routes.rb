@@ -1,7 +1,11 @@
 Scanner::Application.routes.draw do
   resources :products
 
-  resources :customers
+  resources :customers do
+    member do
+      get :products
+    end
+  end
 
   namespace :api do
     namespace :v1 do
