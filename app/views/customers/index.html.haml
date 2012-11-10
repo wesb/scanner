@@ -1,5 +1,7 @@
 - title "Customers"
 
+%p= link_to 'New Customer', new_customer_path, class: 'btn'
+
 %table.table.table-striped
   %thead
     %tr
@@ -18,5 +20,3 @@
         %td= link_to 'Show', customer
         %td= link_to 'Edit', edit_customer_path(customer)
         %td= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }
-
-= link_to 'New Customer', new_customer_path, class: 'btn'
