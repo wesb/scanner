@@ -10,6 +10,11 @@
   %b Email:
   = @customer.email
 
+%h4 Check-ins
+%ul
+  - @customer.checkins.reverse.each do |checkin|
+    %li= l checkin.created_at
+
 = link_to 'Edit', edit_customer_path(@customer)
 \|
 = link_to 'Back', customers_path
