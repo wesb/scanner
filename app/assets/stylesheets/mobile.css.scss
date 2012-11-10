@@ -1,3 +1,17 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require animate
+ *= require_self
+ */
+
 body {
   background-color: #000;
   margin: 0;
@@ -16,12 +30,18 @@ h1,h2,h3,h4,h5,h6,strong,b {
 
 .container {
   width: 320px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   margin: 0 auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #logo {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
 }
 
 #main-title {
@@ -68,4 +88,37 @@ h1,h2,h3,h4,h5,h6,strong,b {
       margin: 4px 0;
     }
   }
+}
+
+.product-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.91);
+  padding: 10px;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 10px #000;
+  h1,p {
+    margin: 4px 0;
+  }
+  .product-modal-close {
+    margin-bottom: 8px;
+  }
+  .photo-container {
+    overflow: hidden;
+  }
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  background-color: #333;
+  border: none;
+  font-family: "AvenirNext-Bold";
+  text-shadow: 0 -1px 0 #000;
+  margin-bottom: 5px;
 }

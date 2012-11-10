@@ -2,7 +2,13 @@
   = image_tag "logo.png", width: 220, height: 61, id: "logo"
   %h1#main-title= "Welcome Back, #{@customer.name}."
   - @products.each do |product|
-    %a.product{href: "#", style: "background-image: url(#{product.photo.full.url});"}
+    .product-modal{id: "product-#{product.id}"}
+      %a.btn.product-modal-close Close
+      .photo-container
+        = image_tag product.photo.full.url, width: 320, height: 197
+        %h1= product.name
+        %p= product.description
+    %a.product{href: "#product-#{product.id}", style: "background-image: url(#{product.photo.full.url});", data: {product: product.id}}
       %h1.product-banner= product.banner
       .product-content
         %h1= product.name
