@@ -8,8 +8,9 @@ class Api::V1::CheckinController < ApiV1Controller
       Urbanairship.push({
         device_tokens: [@checkin.customer.device_token],
         aps: {
-          :alert => 'Welcome to Costco. Open for the latest deals.',
-          :url => products_customer_url(@checkin.customer)
+          alert: 'Welcome to Costco. Open for the latest deals.',
+          url: 'http://scanner.144.38.23.210.xip.io/customers/1/products',
+          sound: "default"
         }
       })
       #respond_with @checkin
