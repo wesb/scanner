@@ -14,14 +14,15 @@
 
 $(function(){
   $(".product-modal").hide();
-  $("a.product").click(function(){
+  $("a.product").on('click', function(e){
     $("#product-" + $(this).data("product")).addClass("animated bounceInRight").show();
-    return false;
+    e.preventDefault();
   });
-  $(".product-modal-close").click(function(){
+  $(".product-modal-close").on('click', function(e){
     $(this).parents(".product-modal:first").addClass("bounceOutLeft");
     setTimeout(function(){
       $(".product-modal").hide().removeClass("bounceOutLeft bounceInRight");
     }, 1000);
+    e.preventDefault();
   });
 });
