@@ -25,3 +25,27 @@ Status code 200 OK
 h3. Failure respone:
 
 Status code 406 Not Acceptable
+
+---
+
+h1. Customers
+
+h2. Creating or updating a customer
+
+Creates a new customer, or updates an existing one if a customer with the supplied @card_number@ already exists.
+
+Resource: @POST /api/v1/customers@
+
+Paramaters: @api_token, customer: {name, card_number, device_token}@
+
+CURL example:
+
+@curl -v -X POST -H "Content-Type: application/json" --data "{\"api_token\": \"test\", \"customer\": {\"name\": \"Wessss\", \"card_number\": \"1118004661178\", \"device_token\": \"ABC123\"}}" http://scanner.144.38.23.210.xip.io/api/v1/customers@
+
+h3. Successful response:
+
+Status code 200 OK
+
+h3. Failure respone:
+
+Status code 406 Not Acceptable
