@@ -3,6 +3,10 @@ Scanner::Application.routes.draw do
 
   resources :products
 
+  resources :sessions
+  match 'logout', to: 'sessions#destroy', as: :logout
+  match 'login', to: 'sessions#new', as: :login
+
   resources :customers do
     member do
       get :products

@@ -1,0 +1,8 @@
+- title "Log in"
+
+= form_tag sessions_path, :class => "form-signin" do
+  = render 'layouts/flash_hash'
+  %h2.form-signin-heading Please log in
+  = email_field_tag :email, params[:email], class: "input-block-level", placeholder: "Email address", autofocus: ''
+  = password_field_tag :password, nil, class: "input-block-level", placeholder: "Password"
+  = submit_tag "Log in", :class => 'btn btn-large btn-primary btn-block'

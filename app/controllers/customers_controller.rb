@@ -1,4 +1,11 @@
 class CustomersController < ApplicationController
+
+  load_and_authorize_resource
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to login_url
+  end
+
   # GET /customers
   # GET /customers.json
   def index
