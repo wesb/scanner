@@ -66,6 +66,9 @@ module Scanner
       g.helper false
     end
 
+    # https://gist.github.com/343843
+    config.email_regex = /^(?:[a-z\d!#\$%&'\*\+\-\/=\?\^_`\{\|\}~]+|\.)+@[a-z\d\-]+(?:\.[a-z\d\-]+)*$/i
+
     YAML.load_file("#{Rails.root}/config/config.yml").each { |k,v| config.send "#{k}=", v }
 
   end
