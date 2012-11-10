@@ -6,11 +6,11 @@ If a request is issued without a _api_token_, or with an invalid _api_token_, th
 
 @401 Unauthorized: {"error":"Invalid API token."}}@
 
-h1. Checking in a customer
+h1. Check In
 
-h2. Checkin
+h2. Checking in a customer
 
-Resource: @GET /api/v1/checkin@
+Resource: @POST /api/v1/checkin@
 
 Paramaters: @api_token, checkin: {card_number, store_id}@
 
