@@ -28,5 +28,9 @@
                   %li
                     = link_to 'Log Out', logout_path
     .container
-      %h1= yield(:title)
+      %h1.clearfix
+        .pull-left= yield(:title)
+        - if show_submenu?
+          #submenu.pull-right
+            = yield :submenu
       = yield

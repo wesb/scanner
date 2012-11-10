@@ -17,6 +17,15 @@ module LayoutHelper
     content_for(:head) { javascript_include_tag(*args) }
   end
 
+  def submenu(&block)
+    content_for(:submenu) { capture(&block) }
+    @show_submenu = true
+  end
+
+  def show_submenu?
+    @show_submenu
+  end
+
   # Wraps a standard link_to call with an li tag with a possible class of active.
   #
   # Without any additional arguments the current url must match the linked url to be active.
