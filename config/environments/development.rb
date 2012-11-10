@@ -35,3 +35,9 @@ Scanner::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+Urbanairship.application_key = Scanner::Application.config.ua_application_key
+Urbanairship.application_secret = Scanner::Application.config.ua_application_secret
+Urbanairship.master_secret = Scanner::Application.config.ua_master_secret
+Urbanairship.logger = Rails.logger
+Urbanairship.request_timeout = 5 # default

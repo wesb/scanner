@@ -66,5 +66,10 @@ module Scanner
       g.helper false
     end
 
+    YAML.load_file("#{Rails.root}/config/config.yml").each { |k,v| config.send "#{k}=", v }
+
   end
 end
+
+
+

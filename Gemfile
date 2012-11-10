@@ -12,6 +12,7 @@ gem 'rabl'
 gem 'strong_parameters'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'urbanairship'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
