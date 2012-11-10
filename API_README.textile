@@ -40,7 +40,7 @@ Paramaters: @api_token, customer: {name, card_number, device_token}@
 
 CURL example:
 
-@curl -v -X POST -H "Content-Type: application/json" --data "{\"api_token\": \"test\", \"customer\": {\"name\": \"Wessss\", \"card_number\": \"1118004661178\", \"device_token\": \"ABC123\"}}" http://scanner.144.38.23.210.xip.io/api/v1/customers@
+@curl -v -X POST -H "Content-Type: application/json" --data "{\"api_token\": \"test\", \"customer\": {\"name\": \"John\", \"card_number\": \"123\", \"device_token\": \"ABC123\"}}" http://scanner.144.38.23.210.xip.io/api/v1/customers@
 
 h3. Successful response:
 
